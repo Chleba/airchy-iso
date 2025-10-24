@@ -94,8 +94,9 @@ notice() {
 # ----
 # Only attempt to load keyboard layout if we're on a real console
 # loadkeys only works on Linux virtual consoles (tty), not in terminal emulators
+keyboard="us"
 if [[ $(tty 2>/dev/null) == "/dev/tty"* ]]; then
-  loadkeys "English (US)|us" 2>/dev/null
+  loadkeys "$keyboard" 2>/dev/null
 fi
 
 # STEP 2: USER
